@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fky3nsswqvrl"
+path="res://.godot/imported/Grass2.wav-fb662a025a64aef28adfbbff5075687f.sample"
+
+[deps]
+
+source_file="res://resources/Ninja Adventure - Asset Pack/Audio/Sounds/Elemental/Grass2.wav"
+dest_files=["res://.godot/imported/Grass2.wav-fb662a025a64aef28adfbbff5075687f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

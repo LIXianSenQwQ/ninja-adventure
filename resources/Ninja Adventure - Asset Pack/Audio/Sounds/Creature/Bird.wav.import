@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4il3rus5tryq"
+path="res://.godot/imported/Bird.wav-4f795234ef837e6aea9d86498055eb6e.sample"
+
+[deps]
+
+source_file="res://resources/Ninja Adventure - Asset Pack/Audio/Sounds/Creature/Bird.wav"
+dest_files=["res://.godot/imported/Bird.wav-4f795234ef837e6aea9d86498055eb6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
