@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv5hdxifygxkq" path="res://resources/Ninja Adventure - Asset Pack/Actor/CharacterAnimated/NinjaGreen/Separate/Walk.png" id="2_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iajl2"]
+size = Vector2(15, 5)
 
 [sub_resource type="Animation" id="Animation_rkbax"]
 length = 0.001
@@ -103,12 +104,15 @@ _data = {
 
 [node name="player" type="CharacterBody2D" unique_id=1237320236]
 texture_filter = 1
+position = Vector2(0, -10)
 script = ExtResource("1_rkbax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1602903166]
+position = Vector2(0.5, 8.5)
 shape = SubResource("RectangleShape2D_iajl2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2034220176]
+position = Vector2(0, 2)
 texture = ExtResource("2_rkbax")
 hframes = 4
 vframes = 4
