@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dgunfnrtm60kc"]
 
 [ext_resource type="PackedScene" uid="uid://cp7h6bhxs1qnl" path="res://player/player.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://d2ekgdeche230" path="res://scenes/follow.gd" id="2_qfnet"]
 [ext_resource type="Texture2D" uid="uid://dyhun5okw1lf" path="res://resources/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png" id="2_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://cnyogkdk4bd77" path="res://resources/Ninja Adventure - Asset Pack/Backgrounds/Animated/Flower/SpriteSheet16x16.png" id="3_k0juu"]
 [ext_resource type="Texture2D" uid="uid://bn8adsj7q62cw" path="res://resources/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png" id="4_71j4m"]
@@ -64,6 +65,13 @@ y_sort_enabled = true
 z_index = 1
 y_sort_enabled = true
 position = Vector2(190.04356, 182.45485)
+speed = 340.0
+
+[node name="follow" type="Camera2D" parent="player" unique_id=249876057 node_paths=PackedStringArray("tilemap")]
+limit_smoothed = true
+position_smoothing_enabled = true
+script = ExtResource("2_qfnet")
+tilemap = NodePath("../../TileMapLayer")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1997284500]
 y_sort_enabled = true
