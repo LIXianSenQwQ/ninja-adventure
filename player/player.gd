@@ -35,3 +35,6 @@ func handleInput():
 func _physics_process(_delta: float) -> void:
 	handleInput()
 	move_and_slide()
+
+func _on_hurt_box_area_entered(area):
+	

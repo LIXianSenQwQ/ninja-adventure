@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://cuu12l53wp2k8"]
+
+[ext_resource type="Script" uid="uid://dg4x1svniy43e" path="res://enemies/shi_lai_mu.gd" id="1_lb02r"]
+[ext_resource type="Texture2D" uid="uid://dsdcxqkfu31bs" path="res://resources/Ninja Adventure - Asset Pack/Actor/Monster/Slime/Slime.png" id="1_uf8aa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0rv0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb02r"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqyuj"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auosh"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rekg3"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c8w2"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_520yn"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oooe6"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isibf"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfar6"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x31nx"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqrg0"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3o7q"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0o2y"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lsby"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii5yg"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r01j"]
+atlas = ExtResource("1_uf8aa")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c60tg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb02r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqyuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auosh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rekg3")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c8w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_520yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oooe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isibf")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfar6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x31nx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqrg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3o7q")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0o2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lsby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii5yg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r01j")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[node name="ShiLaiMu" type="CharacterBody2D" unique_id=548501378]
+script = ExtResource("1_lb02r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=445500749]
+shape = SubResource("CircleShape2D_k0rv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=466249043]
+process_mode = 1
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_c60tg")
+animation = &"up"
+autoplay = "up"
