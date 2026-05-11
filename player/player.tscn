@@ -102,11 +102,12 @@ _data = {
 &"walk_up": SubResource("Animation_yw30f")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
+radius = 7.0
+
 [node name="player" type="CharacterBody2D" unique_id=1237320236]
 texture_filter = 1
-position = Vector2(0, -10)
 script = ExtResource("1_rkbax")
-speed = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1602903166]
 position = Vector2(0.5, 8.5)
@@ -120,3 +121,12 @@ vframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1863392307]
 libraries/ = SubResource("AnimationLibrary_yw30f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1248127633]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=650090124]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_rkbax")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

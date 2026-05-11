@@ -32,9 +32,17 @@ func handleInput():
 		var suffix=_vector_to_current_suffix(moveDirection)
 		animation.play("walk_%s" % suffix)
 	
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision=get_slide_collision(i)
+		var collider=collision.get_collider()
+		print_debug(collider.name)
 func _physics_process(_delta: float) -> void:
 	handleInput()
+	handleCollision()
 	move_and_slide()
 
-func _on_hurt_box_area_entered(area):
-	
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.name=="hitBox":
+		print_debug(area.get_parent().name)
