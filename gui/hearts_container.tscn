@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d3y231wk8qova"]
+
+[ext_resource type="PackedScene" uid="uid://b3tulxqy535bp" path="res://gui/heat.tscn" id="1_e62wj"]
+
+[node name="heartsContainer" type="HBoxContainer" unique_id=965347247]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 2
+
+[node name="heat" parent="." unique_id=1663919954 instance=ExtResource("1_e62wj")]
+layout_mode = 2
+
+[node name="heat2" parent="." unique_id=173615458 instance=ExtResource("1_e62wj")]
+layout_mode = 2
+
+[node name="heat3" parent="." unique_id=1974269856 instance=ExtResource("1_e62wj")]
+layout_mode = 2
+
+[node name="heat4" parent="." unique_id=1419507092 instance=ExtResource("1_e62wj")]
+layout_mode = 2

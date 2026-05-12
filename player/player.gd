@@ -3,7 +3,13 @@ extends CharacterBody2D
 
 @export  var speed: = 40.0
 
+@export var maxHealth:int=3
+
+@onready var currentHealth=maxHealth
+
 @onready var animation=$AnimationPlayer
+
+
 
 func _vector_to_current_suffix(direction: Vector2) -> StringName:
 	# 根据输入方向判断应该播放哪个方向的动画
@@ -46,3 +52,6 @@ func _physics_process(_delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.name=="hitBox":
 		print_debug(area.get_parent().name)
+		currentHealth-=1
+		if currentHealth <= 0:
+			currentHealth=maxHealth
